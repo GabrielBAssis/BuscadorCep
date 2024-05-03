@@ -11,8 +11,6 @@ public class ConsultarCEP {
     public Endereco buscaEndereco(String cep) {
         URI endereco = URI.create("https://viacep.com.br/ws/" + cep + "/json");
 
-        HttpClient client = HttpClient.newHttpClient();
-
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(endereco)
                 .build();
